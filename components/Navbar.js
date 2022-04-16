@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div className="container">
+        <div className="container-fluid">
           {session && (
             <button
               className="navbar-toggler"
