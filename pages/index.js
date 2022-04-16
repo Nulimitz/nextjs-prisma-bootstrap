@@ -1,28 +1,26 @@
 import { getSession, signIn, signOut, useSession } from "next-auth/react";
 import { getCourses } from "../utils/db";
 import Layout from "../components/Layout";
-import Hero from "../components/Hero";
 
 export default function Home({ courses }) {
   const { data: session } = useSession();
 
-  //redirect if not authenticated
-  // const router = useRouter();
-
-  //  const { status } = useSession({
-  //    required: true,
-  //    onUnauthenticated() {
-  //      // The user is not authenticated, handle it here.
-  //      router.push("/login");
-  //    },
-  //  });
+  // redirect if not authenticated
+  const router = useRouter();
+  const { status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      // The user is not authenticated, handle it here.
+      router.push("/home");
+    },
+  });
 
   return (
     <Layout title="Courses">
-      <>
+      <div className="container-fluid">
         <h1>Courses</h1>
         <pre>{JSON.stringify(courses, null, 2)}</pre>
-      </>
+      </div>
     </Layout>
   );
 }
