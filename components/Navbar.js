@@ -134,15 +134,7 @@ function Navbar() {
                       </span>
                     </li>
                     <li>
-                      <Link href="/admin" passhref>
-                        <a className="dropdown-item">
-                          <i className="bi bi-speedometer2 me-2"></i>
-                          <span>Dashboard</span>
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/" passhref>
+                      <Link href="#" passhref>
                         <a className="dropdown-item">
                           <i className="bi bi-person me-2"></i>
                           <span>Profile</span>
@@ -150,7 +142,7 @@ function Navbar() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/settings" passhref>
+                      <Link href="#" passhref>
                         <a className="dropdown-item">
                           <i className="bi bi-gear me-2"></i>
                           <span>Settings</span>
