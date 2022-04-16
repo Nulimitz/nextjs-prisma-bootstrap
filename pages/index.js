@@ -18,7 +18,7 @@ export default function Home({ courses }) {
 
   return (
     <Layout title="Courses">
-      <div className="container-fluid">
+      <div className="container">
         <h1>Courses</h1>
         <pre>{JSON.stringify(courses, null, 2)}</pre>
       </div>
