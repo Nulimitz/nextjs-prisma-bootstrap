@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
+module.exports = {
+  images: {
+    domains: ["lh3.googleusercontent.com"],
+  },
+  env: {
+    mapbox_key: "",
+  },
+};
