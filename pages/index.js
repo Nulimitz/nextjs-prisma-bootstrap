@@ -1,4 +1,5 @@
-import { getSession, signIn, signOut, useSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import { getCourses } from "../utils/db";
 import Layout from "../components/Layout";
 
