@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { getSession, signIn, signOut, useSession } from "next-auth/react";
+import { getCourses } from "../utils/db";
+import axios from "axios";
 
-export default function Home() {
+export default function Home({ courses }) {
   const { data: session } = useSession();
 
   //redirect if not authenticated
@@ -32,12 +34,17 @@ export default function Home() {
             Sign in
           </button>
         ) : (
-          <button
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-            onClick={signOut}
-          >
-            Sign out
-          </button>
+          <>
+            <button
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              onClick={signOut}
+            >
+              Sign out
+            </button>
+
+            <h1>Courses</h1>
+            <pre>{JSON.stringify(courses, null, 2)}</pre>
+          </>
         )}
       </main>
     </div>
@@ -46,10 +53,12 @@ export default function Home() {
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
+  const data = await getCourses();
 
   return {
     props: {
       session,
+      courses: JSON.parse(JSON.stringify(data)),
     },
   };
 }
