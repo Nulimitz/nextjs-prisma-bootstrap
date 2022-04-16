@@ -12,7 +12,7 @@ function Layout({ title, children }) {
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
 
-        <main role="main" className="flex-fill pt-3 mt-3">
+        <main role="main" className="flex-fill">
           {children}
         </main>
 

@@ -6,7 +6,7 @@ const notFound = () => {
   return (
     <>
       <Layout title="Not Found">
-        <div className="page-wrap d-flex flex-row align-items-center">
+        <div className="page-wrap d-flex flex-row align-items-center pt-3 mt-3">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-12 text-center">
