@@ -2,7 +2,7 @@ import { getSession, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
-import { PrismaClient } from '@prisma/client';
+import { getUserByEmail } from "../utils/db";
 
 export default function Profile({ user: { name, email, image, accounts } }) {
   const { data: session } = useSession();
@@ -21,7 +21,7 @@ export default function Profile({ user: { name, email, image, accounts } }) {
 
   return (
     <Layout title="Dashboard" sidebar>
-      <div className="container-fluid content mt-3 pt-3">
+      <div className="container-fluid mt-3 pt-3">
         <h1>Profile</h1>
         <div className="row">
           <div className="col-md-4">
@@ -99,18 +99,7 @@ export default function Profile({ user: { name, email, image, accounts } }) {
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
-  const email = session.user.email
-
-  const prisma = new PrismaClient()
-  const user = await prisma.User.findUnique({
-    where: {
-      email,
-    },
-    include: {
-      accounts: true,
-    },
-  })
-  await prisma.$disconnect()
+  const user = await getUserByEmail(session.user.email)
 
   return {
     props: {

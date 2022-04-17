@@ -42,7 +42,3 @@
     top: var(--topNavbarHeight);
   }
 }
-
-.content {
-  height: 100%;
-}
