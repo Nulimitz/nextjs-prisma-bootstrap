@@ -49,9 +49,8 @@ const Navbar = () => {
                   <li className="nav-item">
                     <Link href="/" passHref>
                       <a
-                        className={`nav-link ${
-                          router.pathname == "/" ? `active` : ""
-                        }`}
+                        className={`nav-link ${router.pathname == "/" ? `active` : ""
+                          }`}
                       >
                         <i className="bi bi-house me-2"></i>
                         <span>Home</span>
@@ -61,9 +60,8 @@ const Navbar = () => {
                   <li className="nav-item">
                     <Link href="#" passHref>
                       <a
-                        className={`nav-link ${
-                          router.pathname == "#" ? `active` : ""
-                        }`}
+                        className={`nav-link ${router.pathname == "#" ? `active` : ""
+                          }`}
                       >
                         <i className="bi bi-info-circle me-2"></i>
                         <span>Help</span>
@@ -84,9 +82,8 @@ const Navbar = () => {
                 <li className="nav-item">
                   <Link href="/" passHref>
                     <a
-                      className={`nav-link ${
-                        router.pathname == "/" ? `active` : ""
-                      }`}
+                      className={`nav-link ${router.pathname == "/" ? `active` : ""
+                        }`}
                     >
                       <i className="bi bi-house me-2"></i>
                       <span>Home</span>
@@ -96,9 +93,8 @@ const Navbar = () => {
                 <li className="nav-item">
                   <Link href="#" passHref>
                     <a
-                      className={`nav-link ${
-                        router.pathname == "#" ? `active` : ""
-                      }`}
+                      className={`nav-link ${router.pathname == "#" ? `active` : ""
+                        }`}
                     >
                       <i className="bi bi-info-circle me-2"></i>
                       <span>Help</span>
@@ -134,7 +130,7 @@ const Navbar = () => {
                       </span>
                     </li>
                     <li>
-                      <Link href="#" passhref>
+                      <Link href="/profile" passhref>
                         <a className="dropdown-item">
                           <i className="bi bi-person me-2"></i>
                           <span>Profile</span>
