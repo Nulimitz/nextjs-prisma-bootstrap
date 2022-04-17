@@ -3,14 +3,14 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-function Navbar() {
+const Navbar = () => {
   const router = useRouter();
   const { data: session } = useSession();
 
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div className="container">
+        <div className="container-fluid">
           {session && (
             <button
               className="navbar-toggler"
@@ -167,6 +167,6 @@ function Navbar() {
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;

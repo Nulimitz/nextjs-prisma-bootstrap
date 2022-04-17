@@ -3,13 +3,20 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div
-      className="hero px-4 py-5 bg-dark text-white d-flex align-items-center"
-      id="home"
-    >
-      <div className="container">
-        <div className="d-sm-flex align-items-center justify-content-between">
-          <div>
+    <section className="hero bg-dark text-white">
+      <div className="container col-xxl-8 px-4 py-5">
+        <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div className="col-10 col-sm-8 col-lg-6">
+            <img
+              src="/images/world_map.png"
+              className="d-block mx-lg-auto img-fluid"
+              alt="NextJS Auth"
+              loading="lazy"
+              width="700"
+              height="500"
+            />
+          </div>
+          <div className="col-lg-6">
             <h1>
               Welcome to <span className="text-primary"> NextJS Auth </span>
             </h1>
@@ -18,25 +25,21 @@ const Hero = () => {
               velit maximus, feugiat turpis a, facilisis nisl. Nunc dignissim,
               libero.
             </p>
-            <Link href="/contact" passHref>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+                Primary
+              </button>
               <button
                 type="button"
-                className="btn btn-primary btn-lg px-4 gap-3"
+                class="btn btn-outline-secondary btn-lg px-4"
               >
-                Contact Us
+                Default
               </button>
-            </Link>
+            </div>
           </div>
-          <Image
-            className="d-block mx-auto mb-4 img-fluid"
-            src="/images/world_map.png"
-            width="500px"
-            height="313px"
-            alt="NextJS Auth"
-          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

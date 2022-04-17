@@ -42,7 +42,6 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  courses       Course[]
 }
 
 model VerificationToken {
@@ -51,20 +50,4 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
-}
-
-model Course {
-  id        Int      @id @default(autoincrement())
-  title     String   @unique
-  createdAt DateTime @default(now())
-  lessons   Lesson[]
-  users     User[]
-}
-
-model Lesson {
-  id        Int      @id @default(autoincrement())
-  title     String   @unique
-  courseId  Int
-  createdAt DateTime @default(now())
-  course    Course   @relation(fields: [courseId], references: [id])
 }

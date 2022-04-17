@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 
-function Layout({ title, children }) {
+const Layout = ({ title, children, sidebar }) => {
   return (
     <>
       <Head>
@@ -12,14 +13,16 @@ function Layout({ title, children }) {
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
 
-        <main role="main" className="flex-fill">
+        <main role="main" className={`${sidebar ? `withSidebar` : ``}`}>
+          {sidebar && <Sidebar />}
           {children}
+          {sidebar && <Footer />}
         </main>
 
-        <Footer />
+        {!sidebar && <Footer />}
       </div>
     </>
   );
-}
+};
 
 export default Layout;
