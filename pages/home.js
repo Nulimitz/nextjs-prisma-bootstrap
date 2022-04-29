@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Cards from "../components/Cards";
 import Learn from "../components/Learn";
 
-function Home() {
+export default function Home() {
   return (
     <>
       <Layout title="Home">
@@ -14,5 +14,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

@@ -1,6 +1,6 @@
 import { getSession, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 
 export default function Index() {
   const { data: session } = useSession();
@@ -16,8 +16,8 @@ export default function Index() {
   });
 
   return (
-    <Layout title="Dashboard">
-      <div className="container mt-3 pt-3">
+    <Layout title="Admin Dashboard" sidebar>
+      <div className="container-fluid mt-3 pt-3">
         <h1>Dashboard</h1>
       </div>
     </Layout>

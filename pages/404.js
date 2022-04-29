@@ -6,8 +6,8 @@ const notFound = () => {
   return (
     <>
       <Layout title="Not Found">
-        <div className="container">
-          <div className="row justify-content-center vh-100">
+        <div className="container mt-3 pt-3">
+          <div className="row">
             <div className="col-md-12 text-center">
               <span className="display-1 d-block">404</span>
               <div className="mb-4 lead">

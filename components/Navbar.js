@@ -49,8 +49,9 @@ const Navbar = () => {
                   <li className="nav-item">
                     <Link href="/" passHref>
                       <a
-                        className={`nav-link ${router.pathname == "/" ? `active` : ""
-                          }`}
+                        className={`nav-link ${
+                          router.pathname == "/" ? `active` : ""
+                        }`}
                       >
                         <i className="bi bi-house me-2"></i>
                         <span>Home</span>
@@ -60,8 +61,9 @@ const Navbar = () => {
                   <li className="nav-item">
                     <Link href="#" passHref>
                       <a
-                        className={`nav-link ${router.pathname == "#" ? `active` : ""
-                          }`}
+                        className={`nav-link ${
+                          router.pathname == "#" ? `active` : ""
+                        }`}
                       >
                         <i className="bi bi-info-circle me-2"></i>
                         <span>Help</span>
@@ -82,8 +84,9 @@ const Navbar = () => {
                 <li className="nav-item">
                   <Link href="/" passHref>
                     <a
-                      className={`nav-link ${router.pathname == "/" ? `active` : ""
-                        }`}
+                      className={`nav-link ${
+                        router.pathname == "/" ? `active` : ""
+                      }`}
                     >
                       <i className="bi bi-house me-2"></i>
                       <span>Home</span>
@@ -93,8 +96,9 @@ const Navbar = () => {
                 <li className="nav-item">
                   <Link href="#" passHref>
                     <a
-                      className={`nav-link ${router.pathname == "#" ? `active` : ""
-                        }`}
+                      className={`nav-link ${
+                        router.pathname == "#" ? `active` : ""
+                      }`}
                     >
                       <i className="bi bi-info-circle me-2"></i>
                       <span>Help</span>
@@ -129,6 +133,16 @@ const Navbar = () => {
                         <p>{session.user.email}</p>
                       </span>
                     </li>
+                    {session.user.role === "admin" && (
+                      <li>
+                        <Link href="/admin" passhref>
+                          <a className="dropdown-item">
+                            <i className="bi bi-person me-2"></i>
+                            <span>Admin Dashboard</span>
+                          </a>
+                        </Link>
+                      </li>
+                    )}
                     <li>
                       <Link href="/profile" passhref>
                         <a className="dropdown-item">
