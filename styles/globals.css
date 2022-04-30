@@ -3,6 +3,15 @@
   --topNavbarHeight: 56px;
 }
 
+.gradient {
+  background: rgb(0, 97, 242);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 97, 242, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
 .sidebar-nav {
   width: var(--offcanvas-width);
 }

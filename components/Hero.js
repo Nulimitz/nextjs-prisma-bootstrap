@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="hero bg-dark text-white">
+    <section className="hero page-header gradient">
       <div className="container col-xxl-8 px-4 py-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div className="col-10 col-sm-8 col-lg-6">
@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
           <div className="col-lg-6">
             <h1>
-              Welcome to <span className="text-primary"> NextJS Auth </span>
+              Welcome to <span className="text-white"> NextJS Auth </span>
             </h1>
             <p className="lead my-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non
@@ -29,7 +29,7 @@ const Hero = () => {
               <Link href="/contact" passHref>
                 <button
                   type="button"
-                  className="btn btn-primary btn-lg px-4 gap-3"
+                  className="btn btn-outline-light btn-lg px-4 gap-3"
                 >
                   Contact Us
                 </button>
