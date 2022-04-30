@@ -76,7 +76,7 @@ const Navbar = () => {
                   onClick={() => signIn("google", { callbackUrl: "/" })}
                   role="button"
                 >
-                  Sign in
+                  Get Started
                 </button>
               </>
             ) : (

@@ -73,7 +73,8 @@ export default function Profile({
               <hr />
               {accounts.map((accounts, i) => (
                 <>
-                  <div className="row" key={accounts.id}>
+                  <hr key={accounts.id} />
+                  <div className="row">
                     <div className="col-sm-3">
                       <h6 className="mb-0">User ID</h6>
                     </div>
