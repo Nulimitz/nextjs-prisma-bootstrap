@@ -1,6 +1,6 @@
 :root {
   --offcanvas-width: 270px;
-  --topNavbarHeight: 56px;
+  --topNavbarHeight: 56px; /* push sidebar to top */
 }
 
 .gradient {
@@ -14,6 +14,7 @@
 
 .sidebar-nav {
   width: var(--offcanvas-width);
+  border: none !important;
 }
 
 .sidebar-link {

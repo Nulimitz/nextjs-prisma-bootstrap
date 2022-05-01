@@ -10,17 +10,14 @@ const Layout = ({ title, children, sidebar }) => {
         <link rel="icon" href="/favicon.ico" />
         <title>{title ? `${title} - Nextjs Auth` : "Nextjs Auth"}</title>
       </Head>
-      <div className="d-flex flex-column min-vh-100">
-        <Navbar />
+      <Navbar />
 
-        <main role="main" className={`${sidebar ? `withSidebar` : ``}`}>
-          {sidebar && <Sidebar />}
-          {children}
-          {sidebar && <Footer />}
-        </main>
+      <main role="main" className={`${sidebar ? `withSidebar` : ``}`}>
+        {sidebar && <Sidebar />}
+        {children}
+      </main>
 
-        {!sidebar && <Footer />}
-      </div>
+      <Footer />
     </>
   );
 };

@@ -8,18 +8,13 @@ const Sidebar = () => {
 
   return (
     <div
-      className="offcanvas offcanvas-start sidebar-nav bg-dark"
+      className="offcanvas offcanvas-start sidebar-nav bg-white"
       tabIndex="-1"
       id="sidebar"
     >
       <div className="offcanvas-body py-5">
-        <nav className="navbar-dark">
+        <nav className="navbar-light">
           <ul className="navbar-nav">
-            <li>
-              <div className="small fw-bold text-uppercase text-muted px-3 mb-3">
-                Dashboard
-              </div>
-            </li>
             {session.user.role === "admin" ? (
               <>
                 <li>
