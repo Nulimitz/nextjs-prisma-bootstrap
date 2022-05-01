@@ -12,7 +12,10 @@ const Layout = ({ title, children, sidebar }) => {
       </Head>
       <Navbar />
 
-      <main role="main" className={`${sidebar ? `withSidebar` : ``}`}>
+      <main
+        role="main"
+        className={`min-vh-100 ${sidebar ? `withSidebar` : ``}`}
+      >
         {sidebar && <Sidebar />}
         {children}
       </main>
