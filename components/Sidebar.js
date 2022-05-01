@@ -12,7 +12,7 @@ const Sidebar = () => {
       tabIndex="-1"
       id="sidebar"
     >
-      <div className="offcanvas-body py-5">
+      <div className="offcanvas-body">
         <nav className="navbar-light">
           <ul className="navbar-nav">
             {session.user.role === "admin" ? (
