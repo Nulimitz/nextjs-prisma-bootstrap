@@ -63,13 +63,13 @@ export default function Profile({
                 </div>
                 <div className="col-sm-9 text-secondary">{email}</div>
               </div>
+              <hr />
               <div className="row">
                 <div className="col-sm-3">
                   <h6 className="mb-0">Role</h6>
                 </div>
                 <div className="col-sm-9 text-secondary">{role}</div>
               </div>
-              <hr />
               {accounts.map((accounts, i) => (
                 <>
                   <hr key={accounts.id} />
